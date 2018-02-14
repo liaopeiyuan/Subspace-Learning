@@ -1,0 +1,205 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="668735812" file="C:\Users\Alexander Liao\Documents\Subspace-Learning\Classical-Algorithm\Subspace-Learning-Classical-Algorithm.prj" location="C:\Users\Alexander Liao\Documents\Subspace-Learning\Classical-Algorithm" name="Subspace-Learning-Classical-Algorithm" target="target.mlapps" target-name="Package App">
+    <param.appname>Subspace-Learning-Classical-Algorithm</param.appname>
+    <param.authnamewatermark>Alexander (Peiyuan) Liao</param.authnamewatermark>
+    <param.email>alexander_liao@outlook.com</param.email>
+    <param.company />
+    <param.icon />
+    <param.icons />
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\Alexander Liao\Desktop\Result.jpg</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name>
+      <item>MATLAB</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+    </param.products.id>
+    <param.products.version>
+      <item>9.3</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>C:\Users\Alexander Liao\Documents\Subspace-Learning\Classical-Algorithm</param.output>
+    <param.guid>c98e754c-4bb3-44c0-9fa0-e013748025fa</param.guid>
+    <unset>
+      <param.company />
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\discretizedWorkspace.m</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\about.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\chi2inv_rtb.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\colnorm.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\ishomog.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\ishomog2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\isrot.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\isrot2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\isvec.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\numcols.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\numrows.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\plot2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\plot_ellipse.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\Plucker.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\stlRead.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\common\tb_optparse.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\contrib\arrow3.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\contrib\pHRIWARE\pHRIWARE.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\contrib\pHRIWARE\VER.txt</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\accel.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\animate.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\cinertia.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\collisions.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\coriolis.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\edit.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\fdyn.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\fellipse.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\fkine.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\friction.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\gencoords.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\genforces.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\gravjac.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\gravload.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\ikcon.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\ikine.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\ikine3.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\ikine6s.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\ikine_sym.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\ikinem.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\ikunc.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\inertia.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\issym.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\itorque.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\jacob0.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\jacob_dot.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\jacobe.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\maniplty.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\nofriction.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\pay.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\paycap.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\perturb.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\plot.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\plot3d.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\private\findjobj.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\qmincon.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\rne.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\rne_dh.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\rne_mdh.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\SerialLink.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\teach.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\trchain.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\@SerialLink\vellipse.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\angvec2r.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\ctraj.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\delta2tr.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\demos\fkine.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\eul2jac.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\eul2r.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\isunit.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\jtraj.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\Link.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\lspb.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\models\mdl_puma560.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\plotbotopt.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\Quaternion.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\r2t.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\Revolute.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\rot2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\rotx.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\roty.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\rotz.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\rpy2jac.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\rpy2r.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\rt2tr.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\RTBPlot.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\RTBPose.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\SE2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\SE3.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\skew.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\skewa.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\SO2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\SO3.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\t2r.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\tr2angvec.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\tr2delta.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\tr2eul.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\tr2rpy.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\tr2rt.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\tranimate.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\tranimate2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\transl.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\transl2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trexp.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trexp2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trinterp.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trinterp2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trlog.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trnorm.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trotx.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\troty.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trotz.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trplot.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trplot2.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\trprint.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\Twist.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\unit.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\UnitQuaternion.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\Add-Ons\Toolboxes\Robotics Toolbox for MATLAB\code\robot\vex.m</file>
+      <file>C:\Users\Alexander Liao\Documents\MATLAB\ty.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\bitTensor.m</file>
+      <file>${PROJECT_ROOT}\coordinateCell.m</file>
+      <file>${PROJECT_ROOT}\discretizedWorkspace.m</file>
+      <file>${PROJECT_ROOT}\postProcessing.m</file>
+      <file>${PROJECT_ROOT}\ptFilter.m</file>
+      <file>${PROJECT_ROOT}\runTimeAnalysis.m</file>
+      <file>${PROJECT_ROOT}\tens2vec.m</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\Alexander Liao\Documents\Subspace-Learning" name="Classical-Algorithm" optional="false">C:\Users\Alexander Liao\Documents\Subspace-Learning\Classical-Algorithm</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2017b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

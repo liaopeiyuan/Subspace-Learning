@@ -1,0 +1,18 @@
+a=Import["C:\\Users\\Alexander Liao\\Google Drive\\ANN-Optimized Robot\\TrainingData10.2.17\\1.jpg"];
+For[i=2,i<=300,i++,b=Import["C:\\Users\\Alexander Liao\\Google Drive\\ANN-Optimized Robot\\TrainingData10.2.17\\"<>ToString[i]<>".jpg"];a= Join[a,b]];
+
+s=Import["C:\\Users\\Alexander Liao\\Google Drive\\ANN-Optimized Robot\\TrainingData10.2.17\\Nope.xlsx"];
+MLdata={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
+MLdata[[1]]=a[[1]]->s[[1,1]];
+For[i=2,i<=50,i++,MLdata[[i]]=a[[i]]->s[[1,i]]];
+
+classes = Union@Values[MLdata]
+
+lenet=NetChain[{ConvolutionLayer[20,5],Ramp,PoolingLayer[2,2],ConvolutionLayer[50,5],Ramp,PoolingLayer[2,2],FlattenLayer[],500,Ramp,26,SoftmaxLayer[]},"Output"->NetDecoder[{"Class",classes}],"Input"->NetEncoder[{"Image",{35,100}}]];
+trained=NetTrain[lenet,MLdata,MaxTrainingRounds->15]
+
+{{D0},{D1},{D10},{D11},{D12},{D13},{D14},{D15},{D16},{D17},{D18},{D19},{D2},{D22},{D23},{D24},{D27},{D28},{D29},{D3},{D30},{D5},{D6},{D7},{D8},{D9}}
+NetChain [Unresolved Dynamic Content]
+trained[,{"TopProbabilities",3}]
+{{D3}->0.150475,{D15}->0.113545,{D19}->0.109147}
