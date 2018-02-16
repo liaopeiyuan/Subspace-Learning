@@ -1,9 +1,5 @@
 # Subspace Learning - a Deep Neural Network Algorithm
 
-
-Master:
-![Build Status]()
-
 An algorithm that learns pertinent subspaces of the original high-dimensional distribution mapping
 
 Original Paper: Deep neural network based subspace learning of robotic manipulator workspace mapping
