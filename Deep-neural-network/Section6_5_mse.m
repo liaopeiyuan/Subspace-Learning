@@ -1,120 +1,117 @@
-for j=1:4
+
         
         load train
         resB=resB';
         resM=resM';
         
 
-        resB=resB(5293:5293+1322,:);
-        resB=datasample(resB',1.5e4)';
-        resM=datasample(resM',1.5e4)';
+        resB=resB(5293:5293+1322,1:6e4);
+        
+        resM=resM(:,1:6e4);
         
         gpuDevice(1)
-        section6_5 = feedforwardnet([100 50 50 100],'trainrp');
-        section6_5.trainParam.epochs = 80;
-        section6_5.trainParam.max_fail=80;
+        section6_5 = feedforwardnet([125 100 100 125],'trainrp');
+        section6_5.trainParam.epochs = 1000;
+        section6_5.trainParam.max_fail=1000;
         section6_5.output.processFcns={'fixunknowns'}
         section6_5.input.processFcns={'fixunknowns'}
         section6_5.performFcn='mse'
 
         [section6_5,tr] = train(section6_5,resM,resB,'useGPU','yes');
-        save(strcat('section6_5_mse_rp','_',num2str(j),'.mat'),'net','tr','-v7.3')
+        save(strcat('section6_5_mse_rp','.mat'),'section6_5','tr','-v7.3')
     
-end
 
-for j=1:4
+
+
         
         load train
         resB=resB';
         resM=resM';
         
 
-        resB=resB(5293:5293+1322,:);
-        resB=datasample(resB',1.5e4)';
-        resM=datasample(resM',1.5e4)';
+        resB=resB(5293:5293+1322,1:6e4);
+        
+        resM=resM(:,1:6e4);
         
         gpuDevice(1)
-        section6_5 = feedforwardnet([100 50 50 100],'trainscg');
-        section6_5.trainParam.epochs = 80;
-        section6_5.trainParam.max_fail=80;
+        section6_5 = feedforwardnet([125 100 100 125],'trainscg');
+        section6_5.trainParam.epochs = 1000;
+        section6_5.trainParam.max_fail=1000;
         section6_5.output.processFcns={'fixunknowns'}
         section6_5.input.processFcns={'fixunknowns'}
         section6_5.performFcn='mse'
 
         [section6_5,tr] = train(section6_5,resM,resB,'useGPU','yes');
-        save(strcat('section6_5_mse_scg','_',num2str(j),'.mat'),'net','tr','-v7.3')
+        save(strcat('section6_5_mse_scg','.mat'),'section6_5','tr','-v7.3')
     
-end
 
-for j=1:4
+
+
         
         load train
         resB=resB';
         resM=resM';
         
 
-        resB=resB(5293:5293+1322,:);
-        resB=datasample(resB',1.5e4)';
-        resM=datasample(resM',1.5e4)';
+        resB=resB(5293:5293+1322,1:6e4);
+        
+        resM=resM(:,1:6e4);
         
         gpuDevice(1)
-        section6_5 = feedforwardnet([100 50 50 100],'traincgb');
-        section6_5.trainParam.epochs = 80;
-        section6_5.trainParam.max_fail=80;
+        section6_5 = feedforwardnet([125 100 100 125],'traincgb');
+        section6_5.trainParam.epochs = 1000;
+        section6_5.trainParam.max_fail=1000;
         section6_5.output.processFcns={'fixunknowns'}
         section6_5.input.processFcns={'fixunknowns'}
         section6_5.performFcn='mse'
 
         [section6_5,tr] = train(section6_5,resM,resB,'useGPU','yes');
-        save(strcat('section6_5_mse_cgb','_',num2str(j),'.mat'),'net','tr','-v7.3')
+        save(strcat('section6_5_mse_cgb','.mat'),'section6_5','tr','-v7.3')
     
-end
 
-for j=1:4
+
+
         
         load train
         resB=resB';
         resM=resM';
         
 
-        resB=resB(5293:5293+1322,:);
-        resB=datasample(resB',1.5e4)';
-        resM=datasample(resM',1.5e4)';
+        resB=resB(5293:5293+1322,1:6e4);
+        
+        resM=resM(:,1:6e4);
         
         gpuDevice(1)
-        section6_5 = feedforwardnet([100 50 50 100],'trainoss');
-        section6_5.trainParam.epochs = 80;
-        section6_5.trainParam.max_fail=80;
+        section6_5 = feedforwardnet([125 100 100 125],'trainoss');
+        section6_5.trainParam.epochs = 1000;
+        section6_5.trainParam.max_fail=1000;
         section6_5.output.processFcns={'fixunknowns'}
         section6_5.input.processFcns={'fixunknowns'}
         section6_5.performFcn='mse'
 
         [section6_5,tr] = train(section6_5,resM,resB,'useGPU','yes');
-        save(strcat('section6_5_mse_oss','_',num2str(j),'.mat'),'net','tr','-v7.3')
+        save(strcat('section6_5_mse_oss','.mat'),'section6_5','tr','-v7.3')
     
-end
 
-for j=1:4
+
+
         
         load train
         resB=resB';
         resM=resM';
         
 
-        resB=resB(5293:5293+1322,:);
-        resB=datasample(resB',1.5e4)';
-        resM=datasample(resM',1.5e4)';
+        resB=resB(5293:5293+1322,1:6e4);
+        
+        resM=resM(:,1:6e4);
         
         gpuDevice(1)
-        section6_5 = feedforwardnet([100 50 50 100],'traingdx');
-        section6_5.trainParam.epochs = 80;
-        section6_5.trainParam.max_fail=80;
+        section6_5 = feedforwardnet([125 100 100 125],'traingdx');
+        section6_5.trainParam.epochs = 1000;
+        section6_5.trainParam.max_fail=1000;
         section6_5.output.processFcns={'fixunknowns'}
         section6_5.input.processFcns={'fixunknowns'}
         section6_5.performFcn='mse'
 
         [section6_5,tr] = train(section6_5,resM,resB,'useGPU','yes');
-        save(strcat('section6_5_mse_gdx','_',num2str(j),'.mat'),'net','tr','-v7.3')
-    
-end
-
+        save(strcat('section6_5_mse_gdx','.mat'),'section6_5','tr','-v7.3')
