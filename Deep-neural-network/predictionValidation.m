@@ -1,7 +1,11 @@
 load test
+
+trainLabel=resB;
+trainFeature=resM;
+
 trainLabel=trainLabel';
 trainFeature=trainFeature';
-trainLabel=trainLabel(1323*3+1:1323*4,:);
+trainLabel=trainLabel(1323*4+1:1323*5,:);
 
 f_final=[];
 
