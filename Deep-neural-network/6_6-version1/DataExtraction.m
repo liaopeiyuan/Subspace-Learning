@@ -1,20 +1,38 @@
 
-num=6
+num=5
 perf=zeros(num,1001);
 grad=zeros(num,1001);
-f_score=zeros(1,num);
-error=zeros(num,1323000);
+f_score=zeros(1000,num);
+recall=zeros(1,num);
+precision=zeros(1,num);
+
+error=zeros(num,1323,1000);
 for i=1:num
-   load(strcat('section6_6_',num2str(4+i),'0_3.mat'))
-   perf(i,:)=tr.perf;
-   grad(i,:)=tr.gradient;
-   [f_score(i),error(i,:)]=predictionValidation(section6_6);
+   %load(strcat('section6_6_',num2str(4+i),'0_3.mat')) 
+   load(strcat('section6_6_50_',num2str(2+i),'.mat'))
+   trFcn(i)={section6_6.trainFcn};
+   %perf(i,:)=tr.perf;
+   %grad(i,:)=tr.gradient;
+   [f_score(:,i),error(i,:,:),precision,recall]=predictionValidation(section6_6);
 end
 meanGrad=mean(grad(:,1:1000));
 stdGrad=std(grad(:,1:1000));
 meanPerf=mean(perf(:,1:1000));
 stdPerf=std(perf(:,1:1000));
-
+%{
+for i=1:num
+    
+    semilogy(1:1000,grad(i,1:1000));
+    hold on
+end
+%}
+f_mean=nanmean(f_score);
+f_std=nanstd(f_score);
+p_mean=nanmean(precision);
+r_mean=nanmean(recall);
+p_std=nanstd(precision);
+r_std=nanstd(recall);
+%{
 for i=1:num
     
     semilogy(1:1000,grad(i,1:1000));
@@ -22,6 +40,8 @@ for i=1:num
 end
 %}
 histo=cell(1,num);
+
+%{
 subplot(1,2,1);
 for i=1:2
     histogram(error(i,:),[-1:0.025:1]);
@@ -40,3 +60,4 @@ for i=3:4
     legend('noMap','outputMap')
     hold on
 end
+%}

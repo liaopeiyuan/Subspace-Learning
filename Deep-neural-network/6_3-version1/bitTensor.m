@@ -66,7 +66,7 @@ function P = bitTensor(m,P,H,opt,dim2)
                        for j=1:sizeY
                           for i=1:sizeX  
                              try
-                                if all(not(isnan(m.ikine(  trotx(dim2(1)) * troty(dim2(2)) * trotz(dim2(3))* transl(H{i,j,k}),'ikine',opt.ikine,'ilimit',opt.ilimit,'rlimit',opt.rlimit,'slimit',opt.slimit,'tol',opt.tol,'lambda',opt.lambda,'lambdamin',opt.lambdamin,'search',opt.search  ))))
+                                if all(not(isnan(m.ikine(  trotx(dim2(1)) * troty(dim2(2)) * trotz(dim2(3))* transl(H{i,j,k}),'ikine',opt.ikine,'ilimit',100,'rlimit',opt.rlimit,'slimit',opt.slimit,'tol',opt.tol,'lambda',opt.lambda,'lambdamin',opt.lambdamin))))
                                 %               Numerical Inverse Kinematics     Homogeneous Transformation Matrix
                                     P(i,j,k)=1;
                                 end

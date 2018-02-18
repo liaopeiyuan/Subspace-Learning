@@ -1,4 +1,4 @@
-function [f_final,error] = predictionValidation(net)
+function [f_final,error,precision,recall] = predictionValidation(net)
 load test
 
 trainLabel=resB;
@@ -22,46 +22,47 @@ for filter=0.5
     [x,y]=size(roundedNetData);
 
 
-    linearForm=zeros(1,x*y);
-    linearOriginal=zeros(1,x*y);
-    linearRaw=zeros(1,x*y);
-    ct=1;
+    linearForm=zeros(x,y);
+    linearOriginal=zeros(x,y);
+    linearRaw=zeros(x,y);
+    %ct=1;
     for i=1:x
         for j=1:y
-            linearForm(ct)=roundedNetData(i,j);
-            linearOriginal(ct)=trainLabel(i,j);
-            linearRaw(ct)=rawNetData(i,j);
-            ct=ct+1;
+            linearForm(i,j)=roundedNetData(i,j);
+            linearOriginal(i,j)=trainLabel(i,j);
+            linearRaw(i,j)=rawNetData(i,j);
+            %ct=ct+1;
         end
     end
 
     absoluteError=abs(linearRaw-linearOriginal);
     error=(linearRaw-linearOriginal);
-    truePos=0;
-    falseNeg=0;
-    falsePos=0;
-    [~,se]=size(linearForm);
-    for i=1:se
-       if and(linearForm(i)==1,linearOriginal(i)==1)
-          truePos=truePos+1; 
+    truePos=zeros(1,y);
+    falseNeg=zeros(1,y);
+    falsePos=zeros(1,y);
+    [x1,y1]=size(linearForm);
+    for i=1:x1
+    for j=1:y1
+       if and(linearForm(i,j)==1,linearOriginal(i,j)==1)
+          truePos(j)=truePos(j)+1; 
        end
-       if and(linearForm(i)==1,linearOriginal(i)==0)
-          falsePos=falsePos+1; 
+       if and(linearForm(i,j)==1,linearOriginal(i,j)==0)
+          falsePos(j)=falsePos(j)+1; 
        end
-       if and(linearForm(i)==0,linearOriginal(i)==1)
-          falseNeg=falseNeg+1; 
+       if and(linearForm(i,j)==0,linearOriginal(i,j)==1)
+          falseNeg(j)=falseNeg(j)+1; 
        end
 
     end
+    end
 
-    precision=truePos/(truePos+falsePos);
-    recall=truePos/(truePos+falseNeg);
-    f_score=2*precision*recall/(precision+recall);
+    precision=truePos./(truePos+falsePos);
+    recall=truePos./(truePos+falseNeg);
+    f_score=2.*precision.*recall./(precision+recall);
 
     f_final=horzcat(f_final,f_score);
     
 end
-
 
 
 

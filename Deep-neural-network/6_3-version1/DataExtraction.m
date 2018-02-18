@@ -1,5 +1,5 @@
 
-num=5
+num=1
 perf=zeros(num,1001);
 grad=zeros(num,1001);
 f_score=zeros(1,num);

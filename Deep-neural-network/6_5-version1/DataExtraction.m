@@ -2,16 +2,17 @@
 num=5
 perf=zeros(num,1001);
 grad=zeros(num,1001);
-f_score=zeros(1,num);
+f_score=zeros(1000,num);
 recall=zeros(1,num);
 precision=zeros(1,num);
 
-error=zeros(num,1323000);
+error=zeros(num,1323,1000);
 for i=1:num
-   load(strcat('section6_5_mse (',num2str(i),').mat'))
-   perf(i,:)=tr.perf;
-   grad(i,:)=tr.gradient;
-   [f_score(i),error(i,:)]=predictionValidation(section6_5);
+   load(strcat('section6_5_crossentropy (',num2str(i),').mat'))
+   trFcn(i)={section6_5.trainFcn};
+   %perf(i,:)=tr.perf;
+   %grad(i,:)=tr.gradient;
+   [f_score(:,i),error(i,:,:)]=predictionValidation(section6_5);
 end
 meanGrad=mean(grad(:,1:1000));
 stdGrad=std(grad(:,1:1000));
@@ -23,6 +24,9 @@ for i=1:num
     semilogy(1:1000,grad(i,1:1000));
     hold on
 end
+
+f_mean=nanmean(f_score);
+f_std=nanstd(f_score);
 %}
 histo=cell(1,num);
 subplot(1,2,1);

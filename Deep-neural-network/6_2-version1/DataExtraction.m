@@ -1,4 +1,4 @@
-%{
+%
 num=7
 perf=zeros(num,1001);
 grad=zeros(num,1001);
@@ -17,7 +17,7 @@ stdPerf=std(perf(:,1:1000));
 
 for i=1:num
     
-    semilogy(1:1000,grad(i,1:1000));
+    semilogy(1:1000,perf(i,1:1000),'LineWidth',1);
     hold on
 end
 %}
