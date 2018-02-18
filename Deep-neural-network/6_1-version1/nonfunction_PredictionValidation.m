@@ -9,7 +9,9 @@ trainLabel=trainLabel(1323*4+1:1323*5,:);
 
 f_final=[];
 
-for filter=0.5
+net=section6_1;
+
+for filter=0:0.05:1
     
     rawNetData=net(trainFeature);
     roundedNetData=ptFilter(rawNetData,filter);

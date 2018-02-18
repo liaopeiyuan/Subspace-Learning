@@ -149,11 +149,11 @@ load train5R31
 
 resB=resB';
 resM=resM';
-resB=resB(:,1:6e4);
-resM=resM(:,1:6e4);
+%resB=resB(:,1:6e4);
+%resM=resM(:,1:6e4);
 
 gpuDevice(1)
-section6_3_5R3_1 = feedforwardnet([125 100 100 125],'trainrp');
+section6_3_5R3_1 = feedforwardnet([50 50],'trainscg');
 section6_3_5R3_1.trainParam.epochs = 1000;
 section6_3_5R3_1.trainParam.max_fail=1000;
 section6_3_5R3_1.output.processFcns={'fixunknowns'}

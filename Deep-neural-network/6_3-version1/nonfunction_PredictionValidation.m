@@ -1,16 +1,16 @@
-%load test0.5
+load test5r1.mat
 trainLabel=resB;
 trainFeature=resM;
 
 trainLabel=trainLabel';
 trainFeature=trainFeature';
 %trainLabel=trainLabel(1323*5+1:1323*6,:);
-net=section6_3_5SO3_p5;
+net=section6_3_5R3_1;
 f_final=[];
 
 
 
-for filter=0.5
+for filter=0:0.1:1
     
     rawNetData=net(trainFeature);
     roundedNetData=ptFilter(rawNetData,filter);
