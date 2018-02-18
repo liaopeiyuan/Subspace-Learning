@@ -9,5 +9,8 @@ for i=1:10
 end
 meanGrad=mean(grad(:,1:1000));
 stdGrad=std(grad(:,1:1000));
-meanPerf=mean(perf(:,1:1000));
-stdPerf=std(perf(:,1:1000));
+meanPerf=mean(grad(:,1:1000));
+stdPerf=std(grad(:,1:1000));
+z=1.645
+z=(x-mean)/std
+zx/std-mean/std
