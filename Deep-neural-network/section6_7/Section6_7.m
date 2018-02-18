@@ -1,4 +1,4 @@
-        final=[]
+        final=[];
         %{
         load train
         resB=resB';
@@ -12,11 +12,11 @@
         end
         %}
         clear resB resM
-        for i=1:20
+        for i=1:5
             
-            for j=1:20
+            for j=1:30
                 gpuDevice(1)
-                section6_7 = feedforwardnet([20 20 20],'trainrp');
+                section6_7 = feedforwardnet([20 20 20],'traingdx');
                 section6_7.trainParam.epochs = j;
                 section6_7.trainParam.max_fail=j;
                 section6_7.output.processFcns={'fixunknowns'}
@@ -26,8 +26,8 @@
                     load(strcat('t',num2str(k),'.mat'));
                     [~,tr] = train(section6_7,a',b','useGPU','yes');
                     performance=tr.perf(max(size(tr.perf)));
-                    final(i,j)=performance;
                 end
+                final=horzcat(final,performance);
 
             end
         end
