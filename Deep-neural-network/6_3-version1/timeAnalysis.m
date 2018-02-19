@@ -1,14 +1,14 @@
 trainFeature=resM;
-final=zeros(7,50);
-sampleSize=50;
+final=zeros(7,6);
+sampleSize=6;
 %for j=1:4
 tDNN=zeros(1,sampleSize);
 %net=n{j};
 for i=1:sampleSize
     tic;
-    rawNetData=section6_3_R3_05(trainFeature(i,:)');
+    rawNetData=section6_3_R3_01(trainFeature(i,:)');
     rND=ptFilter(rawNetData,0.5);
-    a{i}=postProcessing(trainFeature(i,:),[zeros(1,1323*3),rND',zeros(1,1323*2)],'visualization',false);
+    a{i}=postProcessing(trainFeature(i,:),[zeros(1,1323*3),rND',zeros(1,1323*3)],'visualization',false);
     %if i==1
         tDNN(i)=toc;
     %else
@@ -16,7 +16,7 @@ for i=1:sampleSize
     %end
 end
 semilogy(tDNN)
-final(i,:)=tDNN;
+%final(i,:)=tDNN;
 hold on
 %end
 
