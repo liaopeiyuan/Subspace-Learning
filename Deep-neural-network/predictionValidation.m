@@ -1,3 +1,4 @@
+function [f_final,error] = predictionValidation(net)
 load test
 
 trainLabel=resB;
@@ -9,7 +10,7 @@ trainLabel=trainLabel(1323*4+1:1323*5,:);
 
 f_final=[];
 
-for filter=0:0.05:1
+for filter=0.5
     
     rawNetData=net(trainFeature);
     roundedNetData=ptFilter(rawNetData,filter);
@@ -35,6 +36,7 @@ for filter=0:0.05:1
     end
 
     absoluteError=abs(linearRaw-linearOriginal);
+    error=(linearRaw-linearOriginal);
     truePos=0;
     falseNeg=0;
     falsePos=0;
