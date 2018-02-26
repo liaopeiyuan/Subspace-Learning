@@ -67,7 +67,7 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
     opt.filter=-1;
     opt.boundary=true;
     opt.jointAngle=[pi/4 pi/4 pi/4 pi/4 pi/4 pi/4];
-    opt.ptSize=20;
+    opt.ptSize=7.5;
     
     opt = tb_optparse(opt, varargin);
     
@@ -96,7 +96,7 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
     for i=1:TYPE
         l(i)=Link([0,D(i),A(i),alpha(i)]);
     end
-    m=SerialLink(l);
+    m=SerialLink(l,'name','robot');
     
     %coordinates=M(3*TYPE+1:sizeFeature);
     
