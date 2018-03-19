@@ -1,4 +1,4 @@
-function [f_final,error] = predictionValidation(net)
+function [f_final,error] = predictionValidation(net,i)
 load test
 
 trainLabel=resB;
@@ -6,7 +6,7 @@ trainFeature=resM;
 
 trainLabel=trainLabel';
 trainFeature=trainFeature';
-trainLabel=trainLabel(1323*4+1:1323*5,:);
+trainLabel=trainLabel(1323*(i-1)+1:1323*i,:);
 
 f_final=[];
 
