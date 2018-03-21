@@ -13,6 +13,7 @@ vert = [-1 -1 i;...
         1 1 i+0.2;...
         -1 1 i+0.2];
 h(ct)=patch('vertices',vert,'Faces',fac,'FaceAlpha',0.1,'FaceColor',color(ct));
+hold on
 ct=ct+1;
 end
 legend('Predictions','Subspace 1','Subspace 2','Subspace 3','Subspace 4','Subspace 5','Subspace 6','Subspace 7')
