@@ -1,6 +1,6 @@
 # Subspace Learning - a Deep Neural Network Algorithm
 
-ICCAIRO 2018 Candidate
+Accepted for Publication in ICCAIRO 2018
 
 An algorithm that learns pertinent subspaces of the original high-dimensional distribution mapping
 
