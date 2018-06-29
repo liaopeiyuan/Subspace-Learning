@@ -67,7 +67,7 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
     opt.filter=-1;
     opt.boundary=true;
     opt.jointAngle=[pi/4 pi/4 pi/4 pi/4 pi/4 pi/4];
-    opt.ptSize=7.5;
+    opt.ptSize=5;
     
     opt = tb_optparse(opt, varargin);
     
@@ -216,13 +216,15 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
             [~,lF]=size(xData);
         end
 
-        figure
-        m.plot(opt.jointAngle);
+        %figure
+        m.plot(opt.jointAngle,'noname','nowrist','noshading','notiles');
         hold on;
         
-        scatter3(xData,yData,zData,opt.ptSize,binBound,'filled')
-        figure
-        scatter3(xData,yData,zData,opt.ptSize,binMap,'filled')
+        scatter3(xData,yData,zData,opt.ptSize,binBound-0.3,'filled')
+        %scatter3(xData,yData,zData,opt.ptSize,'b','filled')
+        hold on;
+        %figure
+        %scatter3(xData,yData,zData,opt.ptSize,binMap,'filled')
         
     end
 
