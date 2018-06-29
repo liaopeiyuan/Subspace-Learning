@@ -11,6 +11,8 @@ from sklearn.preprocessing import minmax_scale
 from datetime import datetime
 import pandas as pd
 import shutil
+import keras
+import json
 
 #a=pd.read_csv('featureTrain.csv' ,dtype='double')
 #print(a)
@@ -40,7 +42,7 @@ numpy.random.seed(7)
 #Xtrain=normalize(Xtrain,axis=1)
 #Xtrain = scale( Xtrain, axis=0, with_mean=True, with_std=True, copy=True )
 #Ytrain = scale( Ytrain, axis=0, with_mean=True, with_std=True, copy=True )
-print(Xtrain)
+print(type(Xtrain))
 #Xtest=numpy.nonzero(numpy.loadtxt('featureTest.csv',dtype='float32',delimiter=','))
 #Ytest=numpy.loadtxt('labelTest.csv',dtype='float32',delimiter=',')
 #Xtest=Xtest[1:30000,:]
@@ -134,24 +136,26 @@ def nn_1(input_length):
     return model
 
 
+def routine(Ytest,nn_predictor):
+    acc=r2_score(Ytest,nn_predictor.predict(Xtest))
+    print(acc)
+    string=str(datetime.now()).replace(".","").replace(" ","")+'-'+str(round(acc,2))
+    nn_predictor.save(string+'.hdf5')
+    shutil.move(string+'.hdf5','./models/'+string+'.hdf5')
+    print(r2_score(Ytest,nn_predictor.predict(Xtest)))
+    return string
+
 nn_predictor = nn_1(len(Xtrain[0,:]))
 
 with tf.device('/gpu:0'):
     try:
-        nn_predictor.fit(Xtrain,Ytrain, batch_size=64, epochs=1000, validation_split=0.2,verbose=2)
+        callback=keras.callbacks.TensorBoard(log_dir='./graph', histogram_freq=0, write_graph=True, write_images=True)
+        history=nn_predictor.fit(Xtrain,Ytrain, batch_size=512, epochs=1, validation_split=0.2,verbose=1, callbacks=[callback])
+        print(type(history))
     except (KeyboardInterrupt, SystemExit):
-       
-        acc=r2_score(Ytest,nn_predictor.predict(Xtest))
-        print(acc)
-        string=str(datetime.now()).replace(".","").replace("-","").replace(":","")+'-'+round(acc,2)+'.hdf5'
-        nn_predictor.save(string)
-        shutil.move(string,'./models/'+string)
-        print(r2_score(Ytest,nn_predictor.predict(Xtest)))
+        routine(Ytest,nn_predictor)
 
-acc=r2_score(Ytest,nn_predictor.predict(Xtest))
-print(acc)
-string=str(datetime.now()).replace(".","").replace("-","").replace(":","")+'-'+round(acc,2)+'.hdf5'
-nn_predictor.save(string)
-shutil.move(string,'./models/'+string)
-print(r2_score(Ytest,nn_predictor.predict(Xtest)))
+string=routine(Ytest,nn_predictor)
+json.dump(history.history, open( string+".json", "w" ))
+shutil.move(string+'.json','./histories/'+string+'.pickle')
 
