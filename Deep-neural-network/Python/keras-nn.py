@@ -171,7 +171,7 @@ def nn_1(input_length):
     #Dense(64, input_dim=24, kernel_initializer="RandomUniform")`    
     opt = optimizers.SGD(lr=0.001, momentum=0.9, decay=0.0001, nesterov=False)
 
-    model.compile(optimizer="adam", loss="binary_crossentropy")
+    model.compile(optimizer="adadelta", loss="binary_crossentropy")
     #model.compile(optimizer="adam", loss="softmax")
 
     return model
