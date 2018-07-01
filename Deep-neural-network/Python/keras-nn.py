@@ -128,12 +128,6 @@ def nn_1(input_length):
     model.add(PReLU())
     model.add(Dropout(0.5))
     
-
-    model.add(Dense(1024, input_dim=2048, kernel_initializer='RandomUniform'))
-    #model.add(BatchNormalization())
-    model.add(PReLU())
-    model.add(Dropout(0.5))
-
     model.add(Dense(512, input_dim=1024, kernel_initializer='RandomUniform'))
     model.add(BatchNormalization())
     model.add(PReLU())
@@ -150,7 +144,7 @@ def nn_1(input_length):
     model.add(Dropout(0.5))
 
     model.add(Dense(256, input_dim=512, kernel_initializer='RandomUniform'))
-    #model.add(BatchNormalization())
+    model.add(BatchNormalization())
     model.add(PReLU())
     model.add(Dropout(0.5))
 
@@ -166,12 +160,13 @@ def nn_1(input_length):
     #model.add(Dropout(0.8))
 
     model.add(Dense(32, input_dim=64, kernel_initializer='RandomUniform'))
+    #model.add(BatchNormalization())
     model.add(Dense(1, activation="sigmoid"))
 
     #Dense(64, input_dim=24, kernel_initializer="RandomUniform")`    
     opt = optimizers.SGD(lr=0.001, momentum=0.9, decay=0.0001, nesterov=False)
 
-    model.compile(optimizer="adadelta", loss="binary_crossentropy")
+    model.compile(optimizer="adam", loss="binary_crossentropy")
     #model.compile(optimizer="adam", loss="softmax")
 
     return model
@@ -203,7 +198,7 @@ with tf.device('/gpu:0'):
         callback=keras.callbacks.TensorBoard(log_dir='./graph', histogram_freq=0, write_graph=True, write_images=True)
         print(Ytrain.shape)
         print(Xtrain.shape)
-        history=nn_predictor.fit(Xtrain,Ytrain, batch_size=1024, epochs=1500, validation_split=0.2,verbose=1, callbacks=[callback])
+        history=nn_predictor.fit(Xtrain,Ytrain, batch_size=1024, epochs=1500, validation_split=0.5,verbose=1, callbacks=[callback])
         
         print(type(history))
         string=routine(Ytest,nn_predictor)
