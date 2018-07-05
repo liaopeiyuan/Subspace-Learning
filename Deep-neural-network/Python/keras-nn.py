@@ -109,23 +109,23 @@ def nn_1(input_length):
     model.add(Dropout(0.5))
 
 
-    model.add(Dense(1024, input_dim=512, kernel_initializer='RandomUniform'))
+    model.add(Dense(1050, input_dim=512, kernel_initializer='RandomUniform'))
     model.add(BatchNormalization())
     model.add(PReLU())
     model.add(Dropout(0.5))
 
     
-    model.add(Dense(2048, input_dim=1024, kernel_initializer='RandomUniform'))
+    model.add(Dense(2100, input_dim=1050, kernel_initializer='RandomUniform'))
     model.add(BatchNormalization())
     model.add(PReLU())
     model.add(Dropout(0.5))
 
-    model.add(Dense(1024, input_dim=2048, kernel_initializer='RandomUniform'))
+    model.add(Dense(1050, input_dim=2100, kernel_initializer='RandomUniform'))
     model.add(BatchNormalization())
     model.add(PReLU())
     model.add(Dropout(0.5))
     
-    model.add(Dense(512, input_dim=1024, kernel_initializer='RandomUniform'))
+    model.add(Dense(512, input_dim=1050, kernel_initializer='RandomUniform'))
     model.add(BatchNormalization())
     model.add(PReLU())
     model.add(Dropout(0.5))
@@ -195,7 +195,7 @@ with tf.device('/gpu:0'):
         callback=keras.callbacks.TensorBoard(log_dir='./graph', histogram_freq=0, write_graph=True, write_images=True)
         print(Ytrain.shape)
         print(Xtrain.shape)
-        history=nn_predictor.fit(Xtrain,Ytrain, batch_size=4096, epochs=100, validation_split=0.05,verbose=1, callbacks=[callback], shuffle=True)
+        history=nn_predictor.fit(Xtrain,Ytrain, batch_size=8192, epochs=350, validation_split=0.05,verbose=1, callbacks=[callback], shuffle=True)
         
         print(type(history))
         string=routine(Ytest,nn_predictor)
