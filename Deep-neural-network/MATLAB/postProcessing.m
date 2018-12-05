@@ -64,10 +64,10 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
 
     opt.type='6DOF';
     opt.visualization=true;
-    opt.filter=-1;
+    opt.filter=1;
     opt.boundary=true;
     opt.jointAngle=[pi/4 pi/4 pi/4 pi/4 pi/4 pi/4];
-    opt.ptSize=20;
+    opt.ptSize=30;
     
     opt = tb_optparse(opt, varargin);
     
@@ -140,12 +140,17 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
 
     [sizeX,sizeY,sizeZ]=size(H);
     
+    disp(sizeX);
+    disp(sizeY);
+    disp(sizeZ);
+    
     index=1;
     
     for k=1:sizeZ
         for j=1:sizeY
             for i=1:sizeX
                 P(i,j,k)=label(index);
+                %disp(index);
                 index=index+1;
             end
         end
@@ -166,7 +171,7 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
         delP=null(1);
     end
     
-    if false
+    if true
         rawXdata=zeros(1,sizeX*sizeY*sizeZ);
         rawYdata=zeros(size(rawXdata));
         rawZdata=zeros(size(rawXdata));
@@ -193,7 +198,7 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
         zData=zeros(size(rawXdata));
         [~,lBin]=size(binMap);
         for i=1:lBin
-            if binMap(i)~=0
+            if binMap(i)>0.1
                 xData(i)=rawXdata(i);
                 yData(i)=rawYdata(i);
                 zData(i)=rawZdata(i);
@@ -220,10 +225,9 @@ function [P,delP,xData,yData,zData]= postProcessing(feature,label,varargin)
         m.plot(opt.jointAngle);
         hold on;
         
-        scatter3(xData,yData,zData,opt.ptSize,binBound,'filled')
-        figure
         scatter3(xData,yData,zData,opt.ptSize,binMap,'filled')
+        figure
+        scatter3(xData,yData,zData,opt.ptSize,binBound,'filled')
         
     end
-
 end
