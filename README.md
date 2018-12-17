@@ -1,6 +1,7 @@
 # [Subspace Learning](https://arxiv.org/abs/1804.08951?context=cs.RO) - a Deep Neural Network Algorithm
 
 Accepted for Publication at ICCAIRO 2018
+S- . T. Yau High School Science Award - Bronze Medalist
 
 An algorithm that learns pertinent subspaces of the original high-dimensional distribution mapping
 
