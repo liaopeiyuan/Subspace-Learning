@@ -2,7 +2,7 @@
 
 [Accepted for Publication at ICCAIRO 2018](http://www.iccairo.org/)
 
-[S- . T. Yau High School Science Award - Bronze Medalist](http://www.yau-awards.science/?page_id=4069&lang=zh)
+[S- . T. Yau High School Science Award - Bronze Medalist](http://www.yau-awards.science/wp-content/uploads/2018/12/%E6%80%BB%E5%86%B3%E8%B5%9B%E8%8E%B7%E5%A5%96%E5%90%8D%E5%8D%95-.pdf)
 
 An algorithm that learns pertinent subspaces of the original high-dimensional distribution mapping
 
